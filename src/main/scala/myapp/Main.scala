@@ -22,9 +22,10 @@ def App: FluxusNode = {
         img(src := "/fluxus.png", cls := "h-24 hover:drop-shadow-[0_0_2em_#61dafbaa]"),
       ),
       a(
+        cls    := "ml-[-12]",
         href   := "https://daisyui.com",
         target := "_blank",
-        img(src := "/daisyui.svg", cls := "h-24 scale-110 ml-[-12] hover:drop-shadow-[0_0_2em_#61dafbaa]"),
+        img(src := "/daisyui.svg", cls := "h-24 scale-110 hover:drop-shadow-[0_0_2em_#61dafbaa]"),
       ),
     ),
     h1(

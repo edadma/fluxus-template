@@ -1,29 +1,48 @@
 # Fluxus Template
 
-Get started building Scala.js applications with Fluxus + Vite. This template comes with:
+Get started building Scala.js applications with Fluxus + Vite + Tailwind/DaisyUI. This template comes with:
 
 - ⚡️ Vite + Scala.js integration for fast development
 - 🎨 DaisyUI components with dark mode support
 - 🖼️ Lucide icons ready to use
-- 🔄 HMR (Hot Module Replacement)
+- 🔄 Live reload development
 
 ## Prerequisites
 
 - [sbt](https://www.scala-sbt.org/download.html) (Scala Build Tool)
 - [Node.js](https://nodejs.org/) (v16 or newer)
+- Basic familiarity with Scala and web development
 
 ## Quick Start
 
 1. Create a new repository from this template
 2. Clone your new repository
-3. Install dependencies:
+3. Install Node.js dependencies:
 ```bash
 npm install
 ```
-4. Start the development server:
+
+## Development Workflow
+
+You'll need to run three processes in separate terminals for development:
+
+### 1. Scala.js Compilation
+```bash
+sbt ~fastLinkJS
+```
+This watches your Scala files and recompiles automatically on changes.
+
+### 2. Tailwind CSS Compilation
+```bash
+npm run tailwind:watch
+```
+This watches your components and recompiles CSS when Tailwind classes are added/removed.
+
+### 3. Development Server
 ```bash
 npm run dev
 ```
+Visit http://localhost:5173 to see your app.
 
 ## Available Scripts
 
@@ -35,7 +54,7 @@ npm run dev
 
 ## Using Components
 
-### Basic Component
+### Basic Stateful Component
 ```scala
 def Counter: () => FluxusNode = () => {
   val (count, setCount, _) = useState(0)
@@ -52,7 +71,7 @@ def Counter: () => FluxusNode = () => {
 }
 ```
 
-### Using Icons
+### Using Lucide Icons
 ```scala
 div(
   cls := "flex items-center gap-2",
@@ -83,20 +102,20 @@ div(
 - Explore [DaisyUI components](https://daisyui.com/components/)
 - Check out available [Lucide icons](https://lucide.dev/icons/)
 
-## Template Structure
+## Project Structure
 ```
 ├── src/
 │   └── main/
 │       ├── scala/
-│       │   └── Main.scala   # Entry point
+│       │   └── Main.scala         # Entry point
 │       └── resources/
 │           └── styles/
 │               └── tailwind.css   # Tailwind entry point
-├── public/                 # Static assets
-├── index.html              # HTML template
-├── build.sbt               # Scala.js build config
-├── package.json            # Node dependencies
-├── vite.config.js          # Vite configuration
-└── tailwind.config.js      # Tailwind/DaisyUI config
+├── public/                        # Static assets
+├── index.html                     # HTML template
+├── output.css                     # Generated CSS
+├── build.sbt                      # Scala.js build config
+├── package.json                   # Node dependencies
+├── vite.config.js                 # Vite configuration
+└── tailwind.config.js             # Tailwind/DaisyUI config
 ```
-

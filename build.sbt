@@ -1,7 +1,8 @@
 import org.scalajs.linker.interface.ModuleSplitStyle
 
-ThisBuild / licenses += "ISC" -> url("https://opensource.org/licenses/ISC")
-ThisBuild / versionScheme     := Some("semver-spec")
+ThisBuild / licenses += "MIT"  -> url("https://opensource.org/licenses/MIT")
+ThisBuild / versionScheme      := Some("semver-spec")
+ThisBuild / evictionErrorLevel := Level.Warn
 
 publish / skip := true
 

@@ -3,18 +3,17 @@ ThisBuild / versionScheme     := Some("semver-spec")
 
 publish / skip := true
 
-lazy val scalajs_template = project
+lazy val fluxus_template = project
   .in(file("."))
   .enablePlugins(ScalaJSPlugin)
 //  .enablePlugins(ScalablyTypedConverterPlugin)
   .settings(
-    name             := "scalajs-template",
+    name             := "fluxus-template",
     version          := "0.0.1",
-    scalaVersion     := "3.5.2",
+    scalaVersion     := "3.6.2",
     organization     := "io.github.edadma",
     githubOwner      := "edadma",
     githubRepository := name.value,
-//    libraryDependencies += "com.raquo" %%% "laminar" % "16.0.0",
 //    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
     libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19" % "test",
 //    libraryDependencies += "com.lihaoyi" %%% "pprint" % "0.9.0" % "test",

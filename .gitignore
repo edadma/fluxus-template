@@ -20,3 +20,6 @@ project/plugins/project/
 .directory
 .idea/
 .bsp/
+
+output.css
+node_modules/

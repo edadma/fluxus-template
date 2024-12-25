@@ -30,7 +30,7 @@ def App: FluxusNode = {
     ),
     h1(
       cls := "text-5xl font-bold text-base-content",
-      "Vite + React + DaisyUI",
+      "Vite + Fluxus + DaisyUI",
     ),
     div(
       cls := "card bg-base-200/50 p-4",

@@ -24,7 +24,7 @@ def App: FluxusNode = {
       a(
         href   := "https://daisyui.com",
         target := "_blank",
-        img(src := "/daisyui.svg", cls := "h-24 scale-110 hover:drop-shadow-[0_0_2em_#61dafbaa]"),
+        img(src := "/daisyui.svg", cls := "h-24 scale-110 ml-[-12] hover:drop-shadow-[0_0_2em_#61dafbaa]"),
       ),
     ),
     h1(
@@ -51,7 +51,7 @@ def App: FluxusNode = {
     p(
       cls := "text-base-content/60 flex items-center gap-2",
       i("data-lucide" := "book-open"),
-      "Click on the Vite and Fluxus logos to learn more",
+      "Click on the Vite, Fluxus, and DaisyUI logos to learn more",
     ),
   )
 }

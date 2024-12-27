@@ -71,15 +71,6 @@ def Counter: () => FluxusNode = () => {
 }
 ```
 
-### Using Lucide Icons
-```scala
-div(
-  cls := "flex items-center gap-2",
-  i("data-lucide" := "heart"),  // Renders a heart icon
-  "Like"
-)
-```
-
 ### DaisyUI Components
 ```scala
 div(
@@ -95,6 +86,70 @@ div(
   )
 )
 ```
+
+## Icons
+
+Fluxus includes all icons from the [Lucide](https://lucide.dev) icon library (1500+ icons). The icons are tree-shakeable - only the icons you actually use will be included in your final bundle.
+
+### Usage
+
+Import any icon from the `icons` package:
+
+```scala
+import io.github.edadma.fluxus.icons.BookOpen  // or any other icon
+
+// Inside your component:
+BookOpen()                                     // default size (24px) and color (currentColor)
+BookOpen(color = "#FF0000")                   // custom color
+BookOpen(size = 48)                           // custom size
+BookOpen(color = "#FF0000", size = 48)        // both custom color and size
+```
+
+### Available Icons
+
+Browse the complete collection of available icons at [lucide.dev/icons](https://lucide.dev/icons). The icon names in Scala are the PascalCase versions of the kebab-case names shown on the Lucide website.
+
+Examples:
+- `book-open` → `BookOpen`
+- `arrow-up-right` → `ArrowUpRight`
+- `chevron-right` → `ChevronRight`
+
+### Styling
+
+Icons inherit their color from the current text color by default (`currentColor`). You can:
+- Style them using the `color` parameter
+- Style them using CSS (the icon inherits the color of its parent element)
+- Adjust size using the `size` parameter (applies to both width and height)
+
+### Example in a Component
+
+Here's a complete example showing an icon in a navigation component:
+
+```scala
+def Navigation = () => {
+  div(
+    cls := "flex items-center gap-2",
+    // Icon inherits color from parent text color
+    span(
+      cls := "text-blue-500 flex items-center",
+      BookOpen(),  // Default size, inherits blue color
+      "Documentation"
+    ),
+    // Custom colored icon
+    ChevronRight(
+      color = "#FF0000",
+      size = 16
+    )
+  )
+}
+```
+
+### Bundle Size Optimization
+
+The icons are automatically tree-shaken by build tools like Vite. This means:
+- Only icons you import and use will be included in your final bundle
+- Unused icons are automatically removed during the build process
+- Each icon is roughly 1KB before minification
 
 ## What's Next?
 

@@ -13,9 +13,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'seven-segment': ['SevenSegment', 'sans-serif'],
-        'dseg7modern': ['DSEG7Modern', 'sans-serif'],
-        'dseg7modernmini': ['DSEG7ModernMini', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       }
     },
   },

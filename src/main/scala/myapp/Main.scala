@@ -1,6 +1,8 @@
 package myapp
 
 import io.github.edadma.fluxus.*
+import io.github.edadma.fluxus.icons.*
+
 import org.scalajs.dom.document
 
 @main def run(): Unit = render(App, "app")
@@ -67,7 +69,7 @@ def App: FluxusNode = {
       ),
     ),
     h1(
-      cls := "text-5xl font-bold text-base-content",
+      cls := "text-5xl font-poppins font-bold text-base-content",
       "Vite + Fluxus + DaisyUI",
     ),
     div(
@@ -89,7 +91,7 @@ def App: FluxusNode = {
     ),
     p(
       cls := "text-base-content/60 flex items-center gap-2",
-      i("data-lucide" := "book-open"),
+      BookOpen(),
       "Click on the Vite, Fluxus, and DaisyUI logos to learn more",
     ),
   )

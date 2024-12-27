@@ -9,15 +9,14 @@ lazy val fluxus_template = project
   .enablePlugins(ScalaJSPlugin)
 //  .enablePlugins(ScalablyTypedConverterPlugin)
   .settings(
-    name                                        := "fluxus-template",
-    version                                     := "0.0.1",
-    scalaVersion                                := "3.6.2",
-    organization                                := "io.github.edadma",
-    githubOwner                                 := "edadma",
-    githubRepository                            := name.value,
-    jsEnv                                       := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
+    name         := "fluxus-template",
+    version      := "0.0.1",
+    scalaVersion := "3.6.2",
+    organization := "io.github.edadma",
+    jsEnv        := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
+    resolvers += "GitHub Package Repository" at "https://maven.pkg.github.com/edadma/fluxus",
     libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
-    libraryDependencies += "io.github.edadma"  %%% "fluxus"          % "0.0.2",
+    libraryDependencies += "io.github.edadma"  %%% "fluxus"          % "0.0.3",
     scalaJSUseMainModuleInitializer             := true,
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },
 //    scalaJSLinkerConfig ~= { _.withModuleSplitStyle(ModuleSplitStyle.SmallestModules) },

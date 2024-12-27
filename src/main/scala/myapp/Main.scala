@@ -11,6 +11,7 @@ def App: FluxusNode = {
 
   def toggleTheme(): Unit = {
     val newTheme = if (theme == "dark") "light" else "dark"
+
     setTheme(newTheme)
     document.documentElement.setAttribute("data-theme", newTheme)
   }

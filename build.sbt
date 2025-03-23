@@ -14,7 +14,7 @@ lazy val fluxus_template = project
     jsEnv        := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
     libraryDependencies ++= Seq(
       "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
-      "io.github.edadma"  %%% "fluxus"          % "0.0.1",
+      "io.github.edadma"  %%% "fluxus"          % "0.0.5",
     ),
     scalaJSUseMainModuleInitializer := true,
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },

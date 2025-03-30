@@ -7,7 +7,7 @@ import org.scalajs.dom.document
 
 @main def run(): Unit = render(App, "app")
 
-def App: FluxusNode = {
+  def App: FluxusNode = {
   val (count, setCount, _) = useState(0)
   val (theme, setTheme, _) = useState("dark")
 

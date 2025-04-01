@@ -1,13 +1,12 @@
 package myapp
 
 import io.github.edadma.fluxus.*
-import io.github.edadma.fluxus.icons.*
-
+import io.github.edadma.fluxus.remix.{LightbulbFill, LightbulbFillProps}
 import org.scalajs.dom.document
 
 @main def run(): Unit = render(App, "app")
 
-  def App: FluxusNode = {
+def App: FluxusNode = {
   val (count, setCount, _) = useState(0)
   val (theme, setTheme, _) = useState("dark")
 
@@ -85,13 +84,13 @@ import org.scalajs.dom.document
       p(
         cls := "mt-4 text-base-content",
         "Edit ",
-        code(cls := "bg-base-300 rounded px-2 py-1", "src/main/scala/myapp/Main.scala"),
+        code(cls := "bg-base-300 rounded px-2 py-1", "src/main/scala/myapp/App.scala"),
         " and save to test HMR",
       ),
     ),
     p(
       cls := "text-base-content/60 flex items-center gap-2",
-      BookOpen(),
+      LightbulbFill <> LightbulbFillProps(),
       "Click on the Vite, Fluxus, and DaisyUI logos to learn more",
     ),
   )

@@ -21,8 +21,5 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "vite": "^6.0.5"
-  },
-  "dependencies": {
-    "lucide": "^0.469.0"
   }
 }

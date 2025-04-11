@@ -21,5 +21,4 @@ project/plugins/project/
 .idea/
 .bsp/
 
-output.css
 node_modules/

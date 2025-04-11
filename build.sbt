@@ -9,12 +9,14 @@ lazy val fluxus_template = project
   .settings(
     name         := "fluxus-template",
     version      := "0.0.1",
-    scalaVersion := "3.6.2",
+    scalaVersion := "3.6.4",
     organization := "io.github.edadma",
     jsEnv        := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
     libraryDependencies ++= Seq(
-      "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
-      "io.github.edadma"  %%% "fluxus"          % "0.0.5",
+      "io.github.cquiroz" %%% "scala-java-time"   % "2.6.0",
+      "io.github.edadma"  %%% "fluxus"            % "0.0.13",
+      "io.github.edadma"  %%% "fluxus-remix"      % "0.0.1",
+      "io.github.edadma"  %%% "fluxus-querystate" % "0.0.1",
     ),
     scalaJSUseMainModuleInitializer := true,
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },

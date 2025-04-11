@@ -1,8 +1,7 @@
 package myapp
 
 import io.github.edadma.fluxus.*
-import io.github.edadma.fluxus.icons.*
-
+import io.github.edadma.fluxus.remix.{BookOpenLine, BookOpenLineProps}
 import org.scalajs.dom.document
 
 @main def run(): Unit = render(App, "app")
@@ -91,7 +90,7 @@ def App: FluxusNode = {
     ),
     p(
       cls := "text-base-content/60 flex items-center gap-2",
-      BookOpen(),
+      BookOpenLine <> BookOpenLineProps(),
       "Click on the Vite, Fluxus, and DaisyUI logos to learn more",
     ),
   )

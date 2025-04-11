@@ -84,7 +84,7 @@ def App: FluxusNode = {
       p(
         cls := "mt-4 text-base-content",
         "Edit ",
-        code(cls := "bg-base-300 rounded px-2 py-1", "src/main/scala/myapp/Main.scala"),
+        code(cls := "bg-base-300 rounded px-2 py-1", "src/main/scala/myapp/App.scala"),
         " and save to test HMR",
       ),
     ),

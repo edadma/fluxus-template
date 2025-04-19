@@ -16,7 +16,7 @@ lazy val fluxus_template = project
       "io.github.cquiroz" %%% "scala-java-time"   % "2.6.0",
       "io.github.edadma"  %%% "fluxus"            % "0.0.21",
       "io.github.edadma"  %%% "fluxus-remix"      % "0.0.2",
-      "io.github.edadma"  %%% "fluxus-daisyui"    % "0.0.2",
+      "io.github.edadma"  %%% "fluxus-daisyui"    % "0.0.5",
       "io.github.edadma"  %%% "fluxus-querystate" % "0.0.2",
       "io.github.edadma"  %%% "fluxus-i18n"       % "0.0.1",
     ),
